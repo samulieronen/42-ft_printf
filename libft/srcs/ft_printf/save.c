@@ -6,7 +6,7 @@
 /*   By: seronen <seronen@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/19 17:09:36 by seronen           #+#    #+#             */
-/*   Updated: 2020/02/24 13:27:59 by seronen          ###   ########.fr       */
+/*   Updated: 2020/06/16 14:03:59 by seronen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int	save_num(char *target, char *str, char flag, size_t len)
 		free(str);
 		target[len] = (char)flag;
 		target[len + 1] = '\0';
-		res = atoi(target);
+		res = ft_atoi(target);
 		free(target);
 	}
 	return (res);

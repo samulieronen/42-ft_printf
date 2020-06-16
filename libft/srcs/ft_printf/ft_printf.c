@@ -6,7 +6,7 @@
 /*   By: seronen <seronen@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/23 10:47:05 by seronen           #+#    #+#             */
-/*   Updated: 2020/02/24 15:56:26 by seronen          ###   ########.fr       */
+/*   Updated: 2020/06/16 14:00:56 by seronen          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,13 +101,13 @@ int				parser(char *format, va_list arg, t_printf *node)
 			get_format(format[i], arg, node);
 			break ;
 		}
-		else if (!strchr(FORMAT, format[i]))
+		else if (!ft_strchr(FORMAT, format[i]))
 		{
 			save_flag(format[i], node, arg);
 		}
 		i++;
 	}
-	if (!strchr(ALLSYM, format[i]))
+	if (!ft_strchr(ALLSYM, format[i]))
 		exit(-1);
 	return (i);
 }
